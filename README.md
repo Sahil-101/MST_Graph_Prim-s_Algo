@@ -1,3 +1,12 @@
+# DSC Project
+Euclidean Minimum Spanning Tree
+
+## Team Members
+1. Sahil (INSERT USN HERE)
+2. Shubham(INSERT USN HERE)
+3. Siddharth(INSERT USN HERE)
+4. Sai Aakash (1MS19CS104)
+
 ## Linux Executable file generation steps ##
 
 make

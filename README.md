@@ -12,7 +12,7 @@ gcc -c init_MST.c
 
 gcc main.c graph.o init_MST.o prims.o
 
-a.exe
+./a.exe
 
 ## After using Files remove them by ##
 

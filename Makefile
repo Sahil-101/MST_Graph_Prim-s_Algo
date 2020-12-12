@@ -9,7 +9,9 @@ cc = gcc
 
 main: main.o graph.o init_MST.o prims.o jsonparser.o
 	$(cc) $(cflags) -g main.o graph.o init_MST.o prims.o jsonparser.o -o main
+	./main
 	curl -X PUT -d @./data1.json https://website-8e733.firebaseio.com/root.json
+	make clean
 
 main.o: main.c graph.o init_MST.o prims.o
 	$(cc) $(cflags) -g -c main.c graph.o init_MST.o prims.o
@@ -25,13 +27,6 @@ prims.o: prims.c prims.h
 
 jsonparser.o: jsonparser.c jsonparser.h
 	$(cc) $(cflags) -g -c jsonparser.c jsonparser.h
-
-
-run : main.c jsonparser.c init_MST.c prims.c graph.c
-	gcc main.c jsonparser.c init_MST.c prims.c graph.c
-		./a.out
-	curl -X PUT -d @./data1.json https://website-8e733.firebaseio.com/root.json
-	make clean
-			
+	
 clean:
-	rm *.o main *.gch *.out
+	rm *.o *.gch *.out

@@ -32,7 +32,7 @@ int main(){
         char id[2] ;
         id[0]= 'n',id[1] = '0'+i;
         node->id="n1";
-        node->x = i;
+        node->x = i+4;
         node->y = i+1;
         nodes[i] = node;
     }

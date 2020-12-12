@@ -12,6 +12,10 @@ Euclidean Minimum Spanning Tree
 make run
 
 ## WINDOWS EXECUTABLE FILE GENERATION STEPS (mingW) ##
+(User should have Curl installed in the pc ) 
+for downloading use the link below
+
+[download](https://curl.se/windows/)
 
 gcc -c graph.c
 
@@ -20,6 +24,7 @@ gcc -c prism.c
 gcc -c init_MST.c
 
 gcc main.c graph.o init_MST.o prims.o
+
 
 ./a.exe
 

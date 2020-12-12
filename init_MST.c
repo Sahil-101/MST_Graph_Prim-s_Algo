@@ -5,7 +5,6 @@ and various typedefs */
 #include <stdio.h>
 //TO DO
 
-void initMST(int n){
+void initMST(int ** ar){
 
-    printf("%d",n);
 }

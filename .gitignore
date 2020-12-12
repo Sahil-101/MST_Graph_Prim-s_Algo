@@ -8,3 +8,6 @@ prims.o
 a.out
 a.exe
 main
+data.json
+data1.json
+data.txt

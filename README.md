@@ -9,7 +9,7 @@ Euclidean Minimum Spanning Tree
 
 ## Linux Executable file generation steps ##
 
-make
+make run
 
 ## WINDOWS EXECUTABLE FILE GENERATION STEPS (mingW) ##
 

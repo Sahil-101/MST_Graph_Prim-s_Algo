@@ -24,6 +24,8 @@ int main(){
     // graph finalMST  = prims(pt);
     // finalMST returns the pointer to a minimum spanning tree
     // print the minimum spanning tree
+
+    // upload the graph to a database and show it on the website
     Node *nodes[3];
     for(int i =0 ;i<3;i++){
         Node* node = malloc(sizeof(Node));
@@ -31,10 +33,12 @@ int main(){
         id[0]= 'n',id[1] = '0'+i;
         node->id="n1";
         node->x = i;
-        node->y = i;
+        node->y = i+1;
         nodes[i] = node;
     }
-    //dd
+   
     parseJson(nodes,3);
-
+ for(int i  = 0 ;i <3;i++){
+        free(nodes[i]);
+    }
 }

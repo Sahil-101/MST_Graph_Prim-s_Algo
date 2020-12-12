@@ -14,13 +14,57 @@ void parseJson(Node* ar[],int n){
     int i;
     int c = 0;
     for( i = len;;){
-        // json[i] = "{";
+
+        strcat(json,"\"id\":\"n");
+        i = strlen(json);
+        json[i]= 48+c;
+
+        strcat(json,"\",\"x\":\"");
+        i = strlen(json);
+
+        json[i]= 48+ar[c]->x;
+
+        strcat(json,"\",\"y\":\"");
+        i = strlen(json);
         // i++;
+        //  json[i]= '\"';
+        // i++;
+
+
+        
+        // json[i]= ',';
+        // i++;
+
+        
+        // json[i]= '\"';
+        // i++;
+        //  json[i]= 'y';
+        // i++;
+        //  json[i]= '\"';
+        // i++;
+        //  json[i]= ':';
+        // i++;
+        //  json[i]= '\"';
+        // i++;
+         json[i]= 48+ar[c]->y;
+        i++;
+         json[i]= '\"';
+        i++;
+
+
+        json[i]= ',';
+        i++;
+
+
         json[i]= '\"';
+        i++;
+         json[i]= 's';
         i++;
          json[i]= 'i';
         i++;
-         json[i]= 'd';
+         json[i]= 'z';
+        i++;
+         json[i]= 'e';
         i++;
          json[i]= '\"';
         i++;
@@ -28,13 +72,12 @@ void parseJson(Node* ar[],int n){
         i++;
          json[i]= '\"';
         i++;
-         json[i]= 'n'+ c/10;
-        i++;
-         json[i]= 48+c;
+         json[i]= '3';
         i++;
          json[i]= '\"';
         i++;
-        
+
+
 
         json[i]= ',';
         i++;
@@ -42,7 +85,15 @@ void parseJson(Node* ar[],int n){
 
         json[i]= '\"';
         i++;
-         json[i]= 'x';
+         json[i]= 'l';
+        i++;
+         json[i]= 'a';
+        i++;
+         json[i]= 'b';
+        i++;
+         json[i]= 'e';
+        i++;
+        json[i]= 'l';
         i++;
          json[i]= '\"';
         i++;
@@ -50,29 +101,15 @@ void parseJson(Node* ar[],int n){
         i++;
          json[i]= '\"';
         i++;
-
-         json[i]= 48+ar[c]->x;
+         json[i]= '(';
         i++;
-         json[i]= '\"';
+         json[i]= 48+ ar[c]->x;
         i++;
-
-
-        
-        json[i]= ',';
+         json[i]= ',';
         i++;
-
-        
-        json[i]= '\"';
+         json[i]= 48+ ar[c]->y;
         i++;
-         json[i]= 'y';
-        i++;
-         json[i]= '\"';
-        i++;
-         json[i]= ':';
-        i++;
-         json[i]= '\"';
-        i++;
-         json[i]= 48+ar[c]->x;
+         json[i]= ')';
         i++;
          json[i]= '\"';
         i++;

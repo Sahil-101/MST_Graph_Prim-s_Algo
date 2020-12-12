@@ -15,7 +15,7 @@ make run
 (User should have Curl installed in the pc ) 
 for downloading use the link below
 
-(download)[https://curl.se/windows/]
+[download](https://curl.se/windows/)
 
 gcc -c graph.c
 

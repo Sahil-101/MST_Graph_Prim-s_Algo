@@ -3,3 +3,4 @@ All MST functions prototype
 and various typedefs */
 
 //TO DO
+void initMST(int ** ar);

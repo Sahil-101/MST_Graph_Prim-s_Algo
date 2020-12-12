@@ -15,6 +15,7 @@ int main(){
     // initMST accepts the pointer of a 2d array and then generates a graph  
     // ar -> pointer to the 2d array
     // graph* pt  = initMST(ar);
+    // pt -> pointer to the initial graph
     // graph finalMST  = prims(pt);
     // finalMST returns the pointer to a minimum spanning tree
     // print the minimum spanning tree

@@ -8,7 +8,7 @@ cflags = -Wall -Wmissing-declarations -Wmissing-prototypes -fsanitize=address -f
 cc = gcc
 
 main: main.o graph.o init_MST.o prims.o
-	$(cc) $(cflags) -g main.o graph.o init_MST.o prims.o
+	$(cc) $(cflags) -g main.o graph.o init_MST.o prims.o -o main
 
 main.o: main.c graph.o init_MST.o prims.o
 	$(cc) $(cflags) -g -c main.c graph.o init_MST.o prims.o
@@ -23,4 +23,4 @@ prims.o: prims.c prims.h
 	$(cc) $(cflags) -g -c prims.c prims.h
 
 clean:
-	rm *.o main
+	rm *.o main *.gch

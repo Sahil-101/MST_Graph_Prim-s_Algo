@@ -3,4 +3,8 @@ Main Function
 using all the functions 
 and algo */
 
-//TO DO
+#include<stdio.h>
+
+int main() {
+    printf("working\n");
+}

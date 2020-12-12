@@ -8,7 +8,7 @@ and algo */
 
 int main(){
     printf("Euclidean Minimum Spanning Tree\n\n");
-    printf("Enter the number of points 2d points\n");
+    printf("Enter the number of 2d points\n");
     int n;scanf("%d",&n);
     initMST(n);
 

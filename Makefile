@@ -7,14 +7,14 @@
 cflags = -Wall -Wmissing-declarations -Wmissing-prototypes -fsanitize=address -fno-omit-frame-pointer
 cc = gcc
 
-main: main.o graph.o init_MST.o prims.o jsonparser.o
+main: graph.o main.o init_MST.o prims.o jsonparser.o
 	$(cc) $(cflags) -g main.o graph.o init_MST.o prims.o jsonparser.o -o main
 	./main
 	curl -X PUT -d @./data1.json https://website-8e733.firebaseio.com/root.json
 	make clean
 
-main.o: main.c graph.o init_MST.o prims.o
-	$(cc) $(cflags) -g -c main.c graph.o init_MST.o prims.o
+main.o: main.c
+	$(cc) $(cflags) -g -c main.c graph.h init_MST.h prims.h
 
 graph.o: graph.c graph.h
 	$(cc) $(cflags) -g -c graph.c graph.h

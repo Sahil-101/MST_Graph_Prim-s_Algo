@@ -1,3 +1,7 @@
+/* 13/12/2020
+Main Function 
+using all the functions 
+and algo */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -36,3 +40,4 @@ int main()
     printf("\n\nTotal cost of Spanning Tree=%d",total_cost);
     return 0;
 }
+

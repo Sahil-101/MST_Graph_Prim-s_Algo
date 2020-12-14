@@ -19,11 +19,13 @@ for downloading use the link below
 
 gcc -c graph.c
 
-gcc -c prism.c
+gcc -c prims.c
 
 gcc -c init_MST.c
 
-gcc main.c graph.o init_MST.o prims.o -lm
+gcc -c jsonparser.c
+
+gcc main.c graph.o init_MST.o prims.o jsonparser.o -lm
 
 ./a.exe
 

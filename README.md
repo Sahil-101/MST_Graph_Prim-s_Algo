@@ -28,6 +28,8 @@ gcc main.c graph.o init_MST.o prims.o -lm
 
 ./a.exe
 
+Visit this link to view the Minimum spanning tree
+[click here](https://aakashpothepalli.github.io/DSC_MS_Sigma/)
 ## After using Files remove them by ##
 
 make clean (for Linux)

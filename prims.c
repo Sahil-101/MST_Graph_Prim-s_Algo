@@ -16,7 +16,8 @@ Graph prims(Graph g)
     int n = get_size(g);
     Graph mst = New_Graph(n);
     double cost[MAX][MAX],distance[MAX];
-    int u,v,min_distance,from[MAX];
+    int u,v;
+    double min_distance,from[MAX];
     int visited[MAX],no_of_edges,i,min_cost,j;
     
     //create cost[][] matrix,spanning[][]
@@ -60,7 +61,7 @@ Graph prims(Graph g)
         
         //insert the edge in spanning tree
         insert_edge(mst,u,v,distance[v]);
-        insert_edge(mst,v,u,distance[v]);
+        // insert_edge(mst,v,u,distance[v]);
         spanning[u][v]=distance[v];
         spanning[v][u]=distance[v];
         no_of_edges--;

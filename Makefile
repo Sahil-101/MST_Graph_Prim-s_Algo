@@ -29,4 +29,4 @@ jsonparser.o: jsonparser.c jsonparser.h
 	$(cc) $(cflags) -g -c jsonparser.c jsonparser.h
 	
 clean:
-	rm *.o *.gch *.out
+	rm *.o *.gch

@@ -31,7 +31,7 @@ Graph initMST(int ar[][2],int n){
     }
     Edges e = get_Edges(g);
     for(int i = 0;i<get_Edges_count(e);i++){
-        printf("%d %d %d \n",e[i].vertex1, e[i].vertex2,e[i].weight);
+        printf("%d %d %d \n",e[i], e[i].vertex2,e[i].weight);
     }
     return g;
 }

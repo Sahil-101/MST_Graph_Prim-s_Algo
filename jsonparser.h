@@ -1,3 +1,5 @@
+#ifndef jsonheader
+#define jsonheader
 
 typedef struct jsonNode{
     char *id;
@@ -13,3 +15,4 @@ typedef struct jsonEdge{
 }jsonEdge;
 
 void parseJson(jsonNode* ar[],int n,jsonEdge* ed[],int m);
+#endif

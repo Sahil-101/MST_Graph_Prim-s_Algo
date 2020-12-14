@@ -2,6 +2,9 @@
 All Graph functions prototype
 and various typedefs */
 
+#ifndef Gheader
+#define Gheader
+
 //graph pointer
 typedef struct graph* Graph;
 
@@ -34,3 +37,5 @@ int get_Edges_count(Graph graph); //tested
 
 //free function
 void free_graph(Graph graph); //tested
+
+#endif

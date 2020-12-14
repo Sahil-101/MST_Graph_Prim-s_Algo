@@ -1,8 +1,15 @@
 
-typedef struct Node{
+typedef struct jsonNode{
     char *id;
     char *label;
     int size;
     int x,y;
-}Node;
-void parseJson(Node* ar[],int n);
+}jsonNode;
+
+typedef struct jsonEdge{
+    char *id;
+    int source;
+    int target;
+}jsonEdge;
+
+void parseJson(jsonNode* ar[],int n,jsonEdge* ed[],int m);

@@ -6,6 +6,7 @@ and various typedefs */
 #include "graph.h"
 #include <stdlib.h>
 #include "prims.h"
+#include "jsonparser.h"
 //TO DO
 //bug check 
 typedef struct edges
@@ -27,7 +28,14 @@ int get2dpoint(int ind){
     return map[ind];
 }
 
+int getIndexfrom2dpoint(int x, int y,int n){
 
+    for(int i = 0 ; i <n;i++){
+        if(map[i] == x*10+y){
+            return i;
+        }
+    }
+}
 Graph initMST(int ar[][2],int n){
     Graph g = New_Graph(n);
 
@@ -55,10 +63,35 @@ Graph initMST(int ar[][2],int n){
     Graph mst = prims(g);
     Edges finalEdges = get_Edges(mst);
     printf("%d\n",get_Edges_count(mst));
-    for(int i = 0;i<get_Edges_count(mst);i++){
+
+    int m = get_Edges_count(mst);
+    jsonEdge* jsonEdges[m];
+
+    for(int i = 0;i<m;i++){
         printf("%d %d %lf \n",get2dpoint(finalEdges[i].vertex1), get2dpoint(finalEdges[i].vertex2),finalEdges[i].weight);
+        jsonEdges[i] = malloc(sizeof(jsonEdge));
+        jsonEdges[i]->source =(finalEdges[i].vertex1) ;
+        jsonEdges[i]->target  =(finalEdges[i].vertex2);
     }
 
+    jsonNode* jsonNodes[n];
+
+    for(int i = 0;  i <n;i++){
+        jsonNodes[i] = malloc(sizeof(jsonNode));
+        jsonNodes[i]->x = get2dpoint(i)/10;
+        jsonNodes[i]->y = get2dpoint(i)%10;
+        jsonNodes[i]->id = i;
+    }
+    parseJson(jsonNodes,n,jsonEdges,m);
+    for(int i = 0;i<get_Edges_count(mst);i++){
+        free(jsonEdges[i]);
+    }
+    for(int i = 0;  i <n;i++){
+        free(jsonNodes[i]);
+    }
+
+    
+    
     free(finalEdges);
     free(initialEdges);
     free_graph(mst);

@@ -8,11 +8,14 @@
 // 6.Repeat step 5 until n-1 edges are added.
 // 7.Return.
 
+#include "graph.h"
 #include "prims.h"
-
-int prims()
+Graph prims(Graph g)
 {
-    int cost[MAX][MAX];
+    int n = get_size(g);
+    Graph mst = New_Graph(n);
+    printf("edge len of the new graph %d",get_Edges_count(mst));
+    double cost[MAX][MAX];
     int u,v,min_distance,distance[MAX],from[MAX];
     int visited[MAX],no_of_edges,i,min_cost,j;
     
@@ -23,10 +26,15 @@ int prims()
             if(G[i][j]==0)
                 cost[i][j]=infinity;
             else
-                cost[i][j]=G[i][j];
+                cost[i][j]=get_weight(g,i,j);
                 spanning[i][j]=0;
         }
-        
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            printf("%lf ",cost[i][j]);
+        }
+        printf("\n");
+    }
     //initialise visited[],distance[] and from[]
     distance[0]=0;
     visited[0]=1;
@@ -51,10 +59,12 @@ int prims()
                 v=i;
                 min_distance=distance[i];
             }
-            
+        printf(" %d ",v);
         u=from[v];
         
         //insert the edge in spanning tree
+        insert_edge(mst,u,v,distance[v]);
+        insert_edge(mst,v,u,distance[v]);
         spanning[u][v]=distance[v];
         spanning[v][u]=distance[v];
         no_of_edges--;
@@ -70,7 +80,9 @@ int prims()
         
         min_cost=min_cost+cost[u][v];
     }
-    
-    return(min_cost);
+        printf("edge len of the new graph %d",get_Edges_count(mst));
+
+    // return(min_cost);
+    return mst;
 }
 

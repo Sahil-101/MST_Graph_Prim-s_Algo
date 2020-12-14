@@ -7,8 +7,8 @@
 
 void parseJson(jsonNode* ar[],int n,jsonEdge* ed[],int m){
     
-    char json1[1000]="{'edges': [{'id': 'e0','source': 'n0','target': 'n1'},{'id': 'e1','source': 'n1','target': 'n2'},{'id': 'e2','source': 'n2','target': 'n0'}],'nodes': [{";
-    char json[1000]="{'edges':[";
+    char json1[10000]="{'edges': [{'id': 'e0','source': 'n0','target': 'n1'},{'id': 'e1','source': 'n1','target': 'n2'},{'id': 'e2','source': 'n2','target': 'n0'}],'nodes': [{";
+    char json[10000]="{'edges':[";
     int len = strlen(json);
     int i;
     

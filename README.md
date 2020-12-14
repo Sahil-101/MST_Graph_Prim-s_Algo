@@ -30,7 +30,7 @@ gcc main.c graph.o init_MST.o prims.o jsonparser.o -lm
 ./a.exe
 
 Visit this link to view the Minimum spanning tree
-[click here](https://aakashpothepalli.github.io/DSC_MS_Sigma/)
+[click here](https://aakashpothepalli.github.io/DSC_MST_Sigma/)
 
 ## After using Files remove them by ##
 

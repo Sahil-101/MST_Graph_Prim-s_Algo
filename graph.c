@@ -49,7 +49,11 @@ static void initialize_vertex(Graph graph)
 Graph New_Graph(int n)
 {
     Graph new = malloc(sizeof(mygraph));
+    assert(new!=NULL);
+
     Vertex temp = malloc(sizeof(myvertex) * n);
+    assert(temp!=NULL);
+    
     new->vertex_array = temp;
     new->size = n;
 
@@ -223,5 +227,4 @@ void free_graph(Graph graph)
 
     free(graph->vertex_array);
     free(graph);
-
 }

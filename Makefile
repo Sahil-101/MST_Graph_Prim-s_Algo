@@ -19,7 +19,7 @@ main.o: main.c
 graph.o: graph.c graph.h
 	$(cc) $(cflags) -g -c graph.c graph.h
 
-init_MST.o: init_MST.c init_MST.h
+init_MST.o: init_MST.c init_MST.h 
 	$(cc) $(cflags) -g -c init_MST.c init_MST.h
 
 prims.o: prims.c prims.h

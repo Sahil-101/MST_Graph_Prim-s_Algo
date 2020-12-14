@@ -53,7 +53,7 @@ Graph New_Graph(int n)
 
     Vertex temp = malloc(sizeof(myvertex) * n);
     assert(temp!=NULL);
-    
+
     new->vertex_array = temp;
     new->size = n;
 
@@ -228,4 +228,3 @@ void free_graph(Graph graph)
     free(graph->vertex_array);
     free(graph);
 }
-

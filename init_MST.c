@@ -53,15 +53,16 @@ Graph initMST(int ar[][2],int n){
     printf("\n\nMinimum Spanning tree\n");
 
     Graph mst = prims(g);
-    // printf("%d ",get_size(mst));
-    // Edges finalEdges = get_Edges(mst);
-    // for(int i = 0;i<get_Edges_count(finalEdges);i++){
-    //     printf("%d %d %lf \n",get2dpoint(finalEdges[i].vertex1), get2dpoint(finalEdges[i].vertex2),finalEdges[i].weight);
-    // }
+    Edges finalEdges = get_Edges(mst);
+    printf("%d\n",get_Edges_count(mst));
+    for(int i = 0;i<get_Edges_count(mst);i++){
+        printf("%d %d %lf \n",get2dpoint(finalEdges[i].vertex1), get2dpoint(finalEdges[i].vertex2),finalEdges[i].weight);
+    }
 
-    // free(finalEdges);
+    free(finalEdges);
     free(initialEdges);
     free_graph(mst);
+    printf("\n\n");
     return g;
 }
 

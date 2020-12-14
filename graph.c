@@ -112,7 +112,7 @@ double get_weight(Graph graph, int vertex1, int vertex2)
 
     Vertex temp = graph->vertex_array[vertex1].next;
 
-    while (temp->vertex != vertex2 && temp->next != NULL)
+    while (temp && temp->vertex != vertex2 && temp->next != NULL)
     {
         temp = temp->next;
     }

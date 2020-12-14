@@ -9,7 +9,7 @@ Euclidean Minimum Spanning Tree
 
 ## Linux Executable file generation steps ##
 
-make run
+make
 
 ## WINDOWS EXECUTABLE FILE GENERATION STEPS (mingW) ##
 (User should have Curl installed in the pc ) 

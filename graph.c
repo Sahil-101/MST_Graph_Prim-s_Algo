@@ -228,7 +228,3 @@ void free_graph(Graph graph)
     free(graph->vertex_array);
     free(graph);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> bbb203b1816c1108340c525c753882754597ff97

@@ -90,6 +90,9 @@ void insert_edge(Graph graph, int vertex1, int vertex2, double weight)
     }
 }
 
+int get_size(Graph g){
+    return g->size;
+}
 //function to remove a vertex and it's respective edges
 void delete_vertex(Graph, int vertex);
 

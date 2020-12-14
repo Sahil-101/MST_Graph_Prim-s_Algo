@@ -23,7 +23,7 @@ gcc -c prism.c
 
 gcc -c init_MST.c
 
-gcc main.c graph.o init_MST.o prims.o
+gcc main.c graph.o init_MST.o prims.o -lm
 
 
 ./a.exe

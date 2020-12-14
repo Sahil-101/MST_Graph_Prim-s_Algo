@@ -31,3 +31,5 @@ int get_Edges_count(Graph graph); //tested
 
 //free function
 void free_graph(Graph graph); //tested
+
+int get_size(Graph g);//returns the size of the adjacency list

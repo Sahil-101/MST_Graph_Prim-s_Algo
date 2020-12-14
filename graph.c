@@ -223,4 +223,5 @@ void free_graph(Graph graph)
 
     free(graph->vertex_array);
     free(graph);
+
 }

@@ -27,7 +27,7 @@ int main(){
             scanf("%d",&ar[i][j]);
      
     Graph initG = initMST(ar,n);
-    printf("%d ",get_size(initG));
+    // printf("%d ",get_size(initG));
     free_graph(initG);
 
 

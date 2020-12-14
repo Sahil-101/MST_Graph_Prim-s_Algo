@@ -6,6 +6,14 @@ and various typedefs */
 #include "graph.h"
 
 //TO DO
+//bug check 
+typedef struct edges
+{
+    int vertex1;
+    int vertex2;
+    double weight;
+} myedges;
+//bug check portion finished
 
 double calcW(int x1, int y1, int x2, int y2){
     return sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
@@ -22,8 +30,8 @@ Graph initMST(int ar[][2],int n){
         }
     }
     Edges e = get_Edges(g);
-    for(int i = 0;i<edge;i++){
-        printf("%d %d %d \n",e[i].vertex1,e[i].vertex2,e[i].weight);
+    for(int i = 0;i<get_Edges_count(e);i++){
+        printf("%d %d %d \n",e[i].vertex1, e[i].vertex2,e[i].weight);
     }
     return g;
 }

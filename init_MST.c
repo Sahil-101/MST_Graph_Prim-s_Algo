@@ -56,7 +56,7 @@ Graph initMST(int ar[][2],int n){
 
     Edges initialEdges = get_Edges(g);
     for(int i = 0;i<get_Edges_count(g);i++){
-        printf("%d %d %lf \n",get2dpoint(initialEdges[i].vertex1), get2dpoint(initialEdges[i].vertex2),initialEdges[i].weight);
+        printf("(%d,%d) (%d,%d) %lf \n",get2dpoint(initialEdges[i].vertex1)/10,get2dpoint(initialEdges[i].vertex1)%10, get2dpoint(initialEdges[i].vertex2)/10, get2dpoint(initialEdges[i].vertex2)%10,initialEdges[i].weight);
     }
     printf("\n\nMinimum Spanning tree\n");
 

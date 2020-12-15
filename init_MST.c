@@ -68,7 +68,7 @@ Graph initMST(int ar[][2],int n){
     jsonEdge* jsonEdges[m];
 
     for(int i = 0;i<m;i++){
-        printf("%d %d %lf \n",get2dpoint(finalEdges[i].vertex1), get2dpoint(finalEdges[i].vertex2),finalEdges[i].weight);
+        printf("(%d,%d) (%d,%d) %lf \n",get2dpoint(finalEdges[i].vertex1)/10,get2dpoint(finalEdges[i].vertex1)%10, get2dpoint(finalEdges[i].vertex2)/10, get2dpoint(finalEdges[i].vertex2)%10,finalEdges[i].weight);
         jsonEdges[i] = malloc(sizeof(jsonEdge));
         jsonEdges[i]->source =(finalEdges[i].vertex1) ;
         jsonEdges[i]->target  =(finalEdges[i].vertex2);

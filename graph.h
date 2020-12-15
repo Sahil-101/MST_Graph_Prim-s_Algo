@@ -2,6 +2,9 @@
 All Graph functions prototype
 and various typedefs */
 
+#ifndef Gheader
+#define Gheader
+
 //graph pointer
 typedef struct graph* Graph;
 
@@ -13,6 +16,9 @@ Graph New_Graph(int n); //tested
 //function to insert new vertex() with vertex number and 
 //weight i.e is the length of the edge connecting to 
 void insert_edge(Graph graph, int vertex1, int vertex2, double weight); //tested
+
+//returns the size of the adjacency list
+int get_size(Graph g);
 
 //function to remove a vertex and it's respective edges
 void delete_vertex(Graph , int vertex );
@@ -32,4 +38,4 @@ int get_Edges_count(Graph graph); //tested
 //free function
 void free_graph(Graph graph); //tested
 
-int get_size(Graph g);//returns the size of the adjacency list
+#endif

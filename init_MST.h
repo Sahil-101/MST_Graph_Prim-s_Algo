@@ -3,8 +3,13 @@ All MST functions prototype
 and various typedefs */
 
 //TO DO
+#ifndef init_header
+#define init_header
+
 #include "graph.h"
 Graph initMST(int ar[][2],int n);
 
 //Calculate Euclidean distance between two points
 double calcW(int x1, int y1, int x2, int y2);
+
+#endif

@@ -29,6 +29,9 @@ gcc main.c graph.o init_MST.o prims.o jsonparser.o -lm
 
 ./a.exe
 
+curl -X PUT -d @./data1.json https://website-8e733.firebaseio.com/root.json
+
+
 Visit this link to view the Minimum spanning tree
 [click here](https://aakashpothepalli.github.io/DSC_MST_Sigma/)
 
